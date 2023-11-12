@@ -14,27 +14,6 @@ action = data["action"]
 X_train, X_test, y_train, y_test = train_test_split(state, action, test_size=0.30)
 
 
-# for i in range(3,10):
-#     clf = DecisionTreeClassifier(criterion='gini', max_depth=i, splitter="best",random_state=2000)
-#     clf = clf.fit(X_train, y_train)
-#     y_pred = clf.predict(X_test)
-#     feature_names = X_train.columns
-#     feature_importance = pd.DataFrame(clf.feature_importances_, index=feature_names).sort_values(0, ascending=False)
-#     print(feature_importance)
-
-#     from sklearn.metrics import roc_auc_score,f1_score,accuracy_score
-#     y_prob0 = clf.predict_proba(X_train)
-#     train_auc = roc_auc_score(y_train, y_prob0, multi_class='ovr')
-#     y_prob1 = clf.predict_proba(X_test)
-#     test_auc = roc_auc_score(y_test, y_prob1, multi_class='ovr')
-#     acc = accuracy_score(y_test,y_pred)
-#     # print(".............")
-#     print(train_auc)
-#     print(test_auc)
-#     print(acc)
-#     print(f1_score(y_test, y_pred, average='weighted'))
-
-
 clf = DecisionTreeClassifier(criterion='gini', max_depth=10, splitter="best")
 clf = clf.fit(X_train, y_train)
 y_pred = clf.predict(X_test)
