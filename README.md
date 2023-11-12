@@ -22,5 +22,5 @@ Accepted at **ML4H-2023**
   - Change the environment name. Noted that no retrained SL model for other policies.
 + Interpratable Policy:
   - Get features from trained policies and execute ``python3 decisiontree.py``
-  - Evaluation: ``python3 DT_eval.py --dpath [DT_directory] --fpath [path/to/output_directory]
+  - Evaluation: ``python3 DT_eval.py --dpath [DT_directory] --fpath [path/to/output_directory]``
   
