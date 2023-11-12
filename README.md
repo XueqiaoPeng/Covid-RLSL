@@ -10,5 +10,14 @@ Accepted at **ML4H-2023**
 + Install Spiningup [Toturial](https://spinningup.openai.com/en/latest/user/installation.html/).
 
 # Run
-+ Train supervised learning model:
-  - 
++ Supervised learning model:
+  - Collect data from simulator ``python3 data_generator_test.py`` 
+  - Then train supervised learning model ``python3 Supervised_Learning_test.py``
++ Reinforcement learning model:
+  - Using the trained SL model, execute ``python3 -m spinup.run ppo --exp_name [example name] --env [environment name] --epochs [epochs numner] --seed [seed]``, and collect the input and output
+  - Using the new dataset retrain the SL model.
+  - Using the retrained SL model, execute ``python3 -m spinup.run ppo --exp_name [example name] --env [environment name] --epochs [epochs numner] --seed [seed]` again.
+  - Evaluation: ``python3 -m spinup.run test_policy [path/to/output_directory]
++ Comparison Policies:
+  - Change the environment name. Noted that no retrained SL model for other policies.
+  
